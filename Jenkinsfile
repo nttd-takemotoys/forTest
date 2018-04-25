@@ -21,11 +21,14 @@ pipeline {
     stage('stage2') {
       steps {
         script {
-        def appvar = input(
-          id: 'id', message: 'message', parameters: [
-          [$class: 'TextParameterDefinition', description: 'appvar', name: 'appvar']
-        ])
-        env.appvar = appvar
+          def appvar = input(
+            id: 'id', message: 'message', parameters: [
+            [$class: 'TextParameterDefinition', description: 'appvar', name: 'appvar']
+          ])
+          env.appvar = appvar
+          echo "appvar"
+          echo "env.appvar"
+
         }
       }
     }
