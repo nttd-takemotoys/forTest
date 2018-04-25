@@ -33,7 +33,7 @@ pipeline {
       parallel {
         stage('stage3') {
           steps {
-            sh 'echo env.appvar'
+            sh 'echo ${env.appvar}'
           }
         }
         stage('') {
